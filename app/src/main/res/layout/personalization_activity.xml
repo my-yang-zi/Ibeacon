@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:myAndroid="http://schemas.android.com/apk/res/com.app.ibeacon"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              >
+<RelativeLayout android:layout_width="match_parent"
+              android:layout_height="100dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="选择你的喜好"
+              android:textSize="30dp"
+              android:layout_centerInParent="true"
+            />
+
+</RelativeLayout>
+
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                    android:orientation="vertical"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <com.app.ibeacon.roundview.RoundTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2.5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/eat"
+            android:text="饮食"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            myAndroid:rv_backgroundColor="@color/yellow"
+            myAndroid:rv_cornerRadius_TL="10dp"/>
+
+        <com.app.ibeacon.roundview.RoundTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/hotel"
+            android:text="住宿"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            myAndroid:rv_backgroundColor="@color/yellow"
+            myAndroid:rv_cornerRadius_TR="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <com.app.ibeacon.roundview.RoundTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2.5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/play"
+            android:text="趣玩"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            myAndroid:rv_backgroundColor="@color/yellow"
+            myAndroid:rv_cornerRadius_BL="10dp"/>
+
+        <com.app.ibeacon.roundview.RoundTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="出行"
+            android:id="@+id/travel"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            myAndroid:rv_backgroundColor="@color/yellow"
+            myAndroid:rv_cornerRadius_BR="10dp"/>
+
+    </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
