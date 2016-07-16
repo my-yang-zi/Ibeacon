@@ -2,6 +2,7 @@ package com.app.ibeacon.util;
 
 import uk.co.alt236.bluetoothlelib.device.BluetoothLeDevice;
 import uk.co.alt236.bluetoothlelib.device.beacon.ibeacon.IBeaconDevice;
+import uk.co.alt236.bluetoothlelib.device.beacon.ibeacon.IBeaconDistanceDescriptor;
 import uk.co.alt236.bluetoothlelib.device.beacon.ibeacon.IBeaconManufacturerData;
 
 
@@ -21,4 +22,9 @@ public class IBeaconDevicesss extends IBeaconDevice {
         super(device);
         mIBeaconData = new IBeaconManufacturerData(this);
     }
+
+    public IBeaconDistanceDescriptor getDistanceDescriptor() {
+        return IBeaconUtilsss.getDistanceDescriptor(getAccuracy());
+    }
+
 }

@@ -1,14 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
+    <LinearLayout android:layout_width="match_parent" android:layout_height="220dp">
 
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+        <ImageView android:id="@+id/update_clothes"
+                   android:layout_width="match_parent"
+                   android:layout_height="200dp"
+                   android:src="@drawable/clothes"
+        />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="200dp"
+                  android:layout_marginTop="20dp"
+                  android:orientation="vertical"
+    >
+        <TextView
+            android:layout_width="match_parent" android:layout_height="80dp"
+            android:text="原单日系复古外贸港风学生半袖卡通图案印花大码短袖t恤潮男夏季
+"/>
+        <TextView android:layout_width="match_parent" android:layout_height="80dp"
+                  android:layout_marginTop="20dp"
+                  android:text="经典纯棉面料，双重水洗工艺，手感柔软舒适。 4级抗起球；环保活性印染，给您健康的新色玩味主义！
+ 3D立体剪裁，挺括有型，时尚百搭，我有我自在~"
+        />
+    </LinearLayout>
 
-    android:text="这是推送"
-      android:gravity="center"
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+    >
+        <LinearLayout android:layout_width="150dp" android:layout_height="81dp"
+                      android:layout_alignParentLeft="true"
+                      android:orientation="vertical"
+        >
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:layout_marginTop="10dp"
+                      android:layout_marginLeft="10dp"
+                      android:text="原价 ："
+                      android:textSize="20dp"
 
-    />
+            />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:layout_marginTop="10dp"
+                      android:layout_marginLeft="80dp"
+                      android:text="100"
+                      android:textSize="20dp"
+                      android:textColor="@color/red"
+            />
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="150dp" android:layout_height="81dp"
+                        android:orientation="vertical"
+                      android:layout_alignParentRight="true"
+        >
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:layout_marginTop="10dp"
+                      android:layout_marginLeft="10dp"
+                      android:text="现价 ："
+                      android:textSize="20dp"
+            />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:layout_marginTop="10dp"
+                      android:text="80元"
+                      android:textSize="20dp"
+                      android:layout_marginLeft="80dp"
+                      android:textColor="@color/red"
+            />
+        </LinearLayout>
+
+    </RelativeLayout>
+
 </LinearLayout>

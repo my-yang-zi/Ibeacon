@@ -129,7 +129,7 @@ public class PushedService extends Service {
 //                        String s=String.valueOf(distance);
 //                        Log.i(TAG, s);
 //
-                        if (distance < 10) {
+                        if (distance<3) {
                             Intent intent = new Intent("android.intent.pushedservice");
                             Bundle bundle = new Bundle();
                             bundle.putInt("Icon", R.drawable.ic_device_ibeacon);
@@ -143,14 +143,12 @@ public class PushedService extends Service {
                             }
                             if (major==2 && PreferenceUtils.getBoolean(PushedService.this, Constants.TRAVEL_2)) {
                                 sendBroadcast(intent);
+                                Log.i(TAG, "N>Ot");
                             }
                             if (major==9 && PreferenceUtils.getBoolean(PushedService.this, Constants.HOTEL_9)) {
                                 sendBroadcast(intent);
                             }
 
-
-
-////                                Log.i(TAG, "N>Ot");
 //                            }
 
                         }
@@ -194,25 +192,25 @@ public class PushedService extends Service {
         }
 
         final double ratio = rssi * 1.0 / txPower;
+//        if (ratio < 1.0) {
+//            return Math.pow(ratio, 10);
+//
+//        } else if (1.0 <= ratio && ratio < 1.2) {
+//            return (0.89976) * Math.pow(ratio, 7.7095) + 0.111;
+//        } else if (1.2 <= ratio && ratio < 1.4) {
+//
+//
+//            return (0.89976) * Math.pow(ratio, 6.7095) + 0.111;
+//        } else
+//            return (0.89976) * Math.pow(ratio, 5.7095) + 0.111;
+//
+
         if (ratio < 1.0) {
             return Math.pow(ratio, 10);
 
-        } else if (1.0 <= ratio && ratio < 1.2) {
-
-            return (0.89976) * Math.pow(ratio, 7.7095) + 0.111;
-        } else if (1.2 <= ratio && ratio < 1.4) {
-
-
-            return (0.89976) * Math.pow(ratio, 6.7095) + 0.111;
         } else
+            return (0.89976) * Math.pow(ratio, 7.7095) + 0.111;
 
-
-            return (0.89976) * Math.pow(ratio, 5.7095) + 0.111;
-
-
-//        int iRssi = (int) Math.abs(rssi);
-//       float power = (float) ((iRssi-59)/(10*2.0));
-//        return Math.pow(10, power);
     }
 
     private void initFalse(Map<String, List<String>> mArray) {

@@ -28,6 +28,7 @@
         <activity android:name=".activity.Push"></activity>
         <service android:name=".service.PushedService" >
         </service>
+        <activity android:name=".activity.UpdateActivity"></activity>
         <activity android:name=".activity.DeviceControlActivity"></activity>
         <activity android:name=".activity.DeviceDetailsActivity"></activity>
         <service android:name=".service.BluetoothLeService"></service>

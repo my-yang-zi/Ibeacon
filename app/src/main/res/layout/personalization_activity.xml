@@ -90,7 +90,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="10dp"
-            android:text="出行"
+            android:text="欢迎"
             android:id="@+id/travel"
             android:textSize="30dp"
             android:textColor="#ffffff"
